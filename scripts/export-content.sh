@@ -12,5 +12,6 @@ DEST="${1:?用法：scripts/export-content.sh <题库仓库目录>}"
 SOURCE="IELTSCDPractice/Content/bank"
 [ -f "$SOURCE/index.json" ] || { echo "没有找到 $SOURCE/index.json，请先运行 build-bank.mjs 与 build-extras.mjs" >&2; exit 1; }
 mkdir -p "$DEST/bank"
-rsync -a --delete --exclude '.DS_Store' --exclude 'index [0-9]*.json' "$SOURCE/" "$DEST/bank/"
+# 排除 iCloud 生成的冲突副本（「xxx 2.png」「index 2.json」）
+rsync -a --delete --exclude '.DS_Store' --exclude '* [0-9].*' "$SOURCE/" "$DEST/bank/"
 echo "已导出到 $DEST/bank（$(du -sh "$DEST/bank" | cut -f1)）"

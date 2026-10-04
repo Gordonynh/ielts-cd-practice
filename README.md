@@ -10,15 +10,16 @@
 - **其余界面**：遵循 Apple Human Interface Guidelines，支持深色模式，横屏、竖屏都能用。
 - **数据只在本机**：练习记录、生词本、备考计划都存在 iPad 上，可以导出 / 恢复 JSON 备份。
 
-## 一句话安装
+## 快速安装
 
-把下面这句话复制给你的 AI（Claude Code、Codex 等能操作电脑的 AI 助手）：
+两种方式任选其一，都可以用免费 Apple ID，不需要付费开发者账号：
+
+- **下载安装包**：从 [Releases](https://github.com/Gordonynh/ielts-cd-practice/releases/latest) 下载 IPA（已含题库），用 Sideloadly 装到 iPad。Mac、Windows 都可以，不需要 Xcode，也不需要 AI 助手。步骤见[方式一](#方式一下载安装包ipa)。
+- **一句话安装**：在装了 Xcode 的 Mac 上，把下面这句话复制给你的 AI 助手（Claude Code、Codex 等能操作电脑的 AI）：
 
 ```text
-阅读 https://github.com/Gordonynh/ielts-cd-practice 的 README，按「安装」一节帮我把这个 App 安装到我的 iPad 上。
+阅读 https://github.com/Gordonynh/ielts-cd-practice 的 README，按「安装」一节的方式二帮我把这个 App 安装到我的 iPad 上。
 ```
-
-需要一台装了 Xcode 的 Mac 和一根能连接 iPad 的数据线。用免费 Apple ID 就能安装，不需要付费开发者账号。
 
 ## 功能
 
@@ -58,14 +59,39 @@
 
 ## 安装
 
-### 需要准备
+| | 方式一：下载安装包 | 方式二：在 Mac 上编译 |
+| --- | --- | --- |
+| 电脑 | Mac 或 Windows | Mac |
+| 需要安装 | Sideloadly | Xcode |
+| AI 助手 | 不需要 | 可选（一句话安装） |
+| 7 天后续期 | 用 Sideloadly 重新安装同一个 IPA | 重新运行安装脚本 |
+
+两种方式都会保留练习记录。免费 Apple ID 签名的 App 有效期都是 7 天，同一时间最多装 3 个这类 App。
+
+### 方式一：下载安装包（IPA）
+
+1. 在 [Releases](https://github.com/Gordonynh/ielts-cd-practice/releases/latest) 下载 `IELTS-CD-Practice-<版本>.ipa`，安装包里已经包含题库。
+2. 在电脑上安装 [Sideloadly](https://sideloadly.io)，Mac、Windows 都有。Windows 还要按 Sideloadly 网站的说明，装好苹果官网下载的 iTunes 和 iCloud。
+3. 用数据线连接 iPad，解锁后点「信任此电脑」。
+4. 在 Sideloadly 中：
+   - 把 IPA 拖进窗口；
+   - 填入你的 Apple ID，点 Start；
+   - 按提示输入 Apple ID 密码。密码只交给 Sideloadly 和苹果，用来签名。
+5. iPad 上需要做两件事：
+   - 打开开发者模式：「设置 → 隐私与安全性 → 开发者模式」，按提示重启并确认；
+   - 信任开发者：「设置 → 通用 → VPN 与设备管理」中选择你的 Apple ID，点「信任」。
+6. 续期：7 天后 App 会打不开，用 Sideloadly 再装一次同一个 IPA 即可，数据不会丢。新版本发布后，也用同样的方法安装新的 IPA。
+
+### 方式二：在 Mac 上编译安装
+
+#### 需要准备
 
 - **Mac 与 Xcode**：macOS 上安装 Xcode 26 或更新版本（App Store 免费下载），装好后打开一次，完成组件安装。
 - **Apple ID**：在 Xcode 的「设置 → 账户」中点左下角 + 登录 Apple ID。免费账号即可。
 - **iPad**：iPadOS 17 或更新版本，用数据线连接 Mac，解锁后点「信任此电脑」。
 - **开发者模式**：iPad 连接过装有 Xcode 的 Mac 后，「设置 → 隐私与安全性」里会出现「开发者模式」。打开后按提示重启，再确认一次。
 
-### 一键安装
+#### 一键安装
 
 ```bash
 git clone https://github.com/Gordonynh/ielts-cd-practice.git
@@ -94,12 +120,12 @@ cd ielts-cd-practice && ./scripts/install-ipad.sh
 | `--device <设备 ID>` | 连接了多台 iPad 时指定其中一台（`xcrun devicectl list devices` 查看） |
 | `--skip-content` | 不下载题库，使用你自己的题库（见下方「题库」） |
 
-### 续期与更新
+#### 续期与更新
 
 - **续期**：免费 Apple ID 签名的 App 有效期 7 天，到期后打不开。重新运行 `./scripts/install-ipad.sh` 即可，练习记录和生词本都会保留。
 - **更新**：先运行 `git pull` 拉取新版本，再运行 `./scripts/install-ipad.sh`，题库也会一起更新。
 
-### 给 AI 助手的说明
+#### 给 AI 助手的说明
 
 请按以下步骤操作，并把每一步的结果告诉用户：
 
@@ -169,6 +195,7 @@ scripts/
   build-extras.mjs         机经、考试回忆、口语 → Content/bank/extras.json
   build-dictionary.mjs     ECDICT → 离线词典与核心词表
   translate-bank.swift     用 Apple 翻译补充段落译文
+  build-ipa.sh             打包含题库的未签名 IPA，用于发布到 Releases（维护者使用）
   export-content.sh        把生成的题库导出到题库仓库（维护者使用）
 docs/                      题库数据格式与示例
 ```

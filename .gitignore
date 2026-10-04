@@ -16,3 +16,6 @@ IELTSCDPractice/Content/bank/
 /backups/
 /local/
 /.claude/
+
+# iCloud 同步目录中生成的冲突副本（「xxx 2.png」）
+* [0-9].*
