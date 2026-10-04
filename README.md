@@ -196,6 +196,7 @@ scripts/
   build-dictionary.mjs     ECDICT → 离线词典与核心词表
   translate-bank.swift     用 Apple 翻译补充段落译文
   build-ipa.sh             打包含题库的未签名 IPA，用于发布到 Releases（维护者使用）
+  render-icon.swift        绘制 App 图标
   export-content.sh        把生成的题库导出到题库仓库（维护者使用）
 docs/                      题库数据格式与示例
 ```
