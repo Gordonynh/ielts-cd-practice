@@ -1,0 +1,18 @@
+.DS_Store
+/build/
+xcuserdata/
+*.xcuserstate
+
+# Xcode 工程由 scripts/generate-xcodeproj.py 生成（含个人签名设置）
+*.xcodeproj/
+/signing.local.json
+
+# 题库在单独的仓库（ielts-cd-practice-content），安装脚本下载到 content/
+/content/
+/bank-source/
+IELTSCDPractice/Content/bank/
+
+# 本地数据：个人备份、缓存与存档
+/backups/
+/local/
+/.claude/

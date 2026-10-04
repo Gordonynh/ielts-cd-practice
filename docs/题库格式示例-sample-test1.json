@@ -1,0 +1,135 @@
+{
+  "format": "ielts-cd-bank/1",
+  "id": "sample-test1",
+  "title": "Sample Test 1",
+  "module": "academic",
+  "source": "格式示例，原创内容",
+  "passages": [
+    {
+      "part": 1,
+      "title": "The return of the urban beekeeper",
+      "titleZh": "城市养蜂人的回归",
+      "frequency": "high",
+      "difficulty": 2,
+      "text": {
+        "heading": "The return of the urban beekeeper",
+        "subheading": "Rooftop hives are spreading across the world's cities, but not everyone is convinced they help nature",
+        "paragraphs": [
+          {
+            "label": "A",
+            "text": "Ten years ago, keeping bees in a city was regarded as an eccentric pastime. Today there are thousands of hives on the rooftops of London, Paris and New York, many of them installed by restaurants, hotels and office buildings eager to show their **environmental credentials**."
+          },
+          {
+            "label": "B",
+            "text": "Cities turn out to suit bees surprisingly well. Parks and private gardens contain a far wider variety of flowering plants than intensively farmed land, and far fewer pesticides are used. Urban areas are also several degrees warmer than the surrounding countryside, which lengthens the foraging season by up to three weeks."
+          },
+          {
+            "label": "C",
+            "text": "However, ecologists have begun to raise concerns. Honeybees compete with wild bees for nectar and pollen, and when hives are packed too closely together, wild species can lose out. A study carried out in London in 2019 found that the number of hives had doubled in five years, while the area of flowering plants had barely changed."
+          },
+          {
+            "label": "D",
+            "text": "Some city authorities have responded with new rules. In Paris, every hive must now be registered, and several districts limit how many hives may be kept in a single area. New beekeepers are also encouraged to complete a training course before buying their first colony."
+          },
+          {
+            "label": "E",
+            "text": "Most experts agree that the answer is not to remove the hives but to increase the food supply. Planting more flowering plants, and linking green spaces through so-called bee corridors, would allow both honeybees and wild pollinators to thrive."
+          }
+        ]
+      },
+      "groups": [
+        {
+          "type": "matching_headings",
+          "instruction": "Reading Passage 1 has five paragraphs, A–E. Choose the correct heading for paragraphs B–D from the list of headings below.",
+          "headings": {
+            "i": "Rules introduced to manage growth",
+            "ii": "A hobby that went mainstream",
+            "iii": "The financial rewards of honey production",
+            "iv": "Advantages of the urban environment",
+            "v": "Competition for scarce resources",
+            "vi": "Training the next generation of beekeepers"
+          },
+          "example": { "paragraph": "A", "answer": "ii" },
+          "questions": [
+            { "number": 1, "paragraph": "B", "answer": "iv" },
+            { "number": 2, "paragraph": "C", "answer": "v" },
+            { "number": 3, "paragraph": "D", "answer": "i" }
+          ]
+        },
+        {
+          "type": "true_false_not_given",
+          "instruction": "Do the following statements agree with the information given in Reading Passage 1?",
+          "questions": [
+            { "number": 4, "text": "Honey produced in cities contains fewer pesticides than honey from the countryside.", "answer": "NOT GIVEN" },
+            { "number": 5, "text": "In London, the number of hives grew faster than the area of flowering plants.", "answer": "TRUE" },
+            { "number": 6, "text": "Registering a hive in Paris is voluntary.", "answer": "FALSE" }
+          ]
+        },
+        {
+          "type": "sentence_completion",
+          "wordLimit": "ONE WORD ONLY",
+          "questions": [
+            { "number": 7, "text": "Warmer temperatures in cities extend the {{7}} season for bees.", "answer": "foraging" },
+            { "number": 8, "text": "Experts recommend creating bee {{8}} to connect green spaces.", "answer": "corridors" }
+          ]
+        },
+        {
+          "type": "multiple_choice_multi",
+          "numbers": [9, 10],
+          "text": "Which TWO measures does the writer mention for protecting wild bees?",
+          "options": {
+            "A": "banning honeybees from public parks",
+            "B": "limiting the number of hives in an area",
+            "C": "introducing new species of wild bee",
+            "D": "planting more flowering plants",
+            "E": "reducing the price of city honey"
+          },
+          "answers": ["B", "D"]
+        },
+        {
+          "type": "multiple_choice",
+          "questions": [
+            {
+              "number": 11,
+              "text": "What is the writer's main purpose in Reading Passage 1?",
+              "options": {
+                "A": "to encourage readers to start keeping bees",
+                "B": "to explain how honey is produced in cities",
+                "C": "to present the benefits and drawbacks of urban beekeeping",
+                "D": "to argue that honeybees should be removed from cities"
+              },
+              "answer": "C"
+            }
+          ]
+        },
+        {
+          "type": "summary_completion_options",
+          "title": "A growing debate",
+          "instruction": "Complete the summary using the list of words, A–F, below.",
+          "text": "Although urban beekeeping is often seen as good for the environment, ecologists warn that too many hives may reduce the {{12}} available to wild bees. Cities such as Paris have responded with stricter {{13}}.",
+          "options": {
+            "A": "food",
+            "B": "regulation",
+            "C": "funding",
+            "D": "space",
+            "E": "awareness",
+            "F": "competition"
+          },
+          "answers": { "12": "A", "13": "B" }
+        }
+      ],
+      "translation": [
+        { "label": "A", "text": "十年前，在城市里养蜂还被视为一种古怪的爱好。如今伦敦、巴黎和纽约的屋顶上有数以千计的蜂箱，其中许多由餐厅、酒店和写字楼设置，用来展示其环保形象。" },
+        { "label": "B", "text": "事实证明城市非常适合蜜蜂。公园和私家花园中的开花植物种类远多于集约化农田，农药使用也少得多。城市还比周边乡村高出好几度，使采蜜季节延长多达三周。" },
+        { "label": "C", "text": "然而，生态学家开始提出担忧。蜜蜂与野生蜂争夺花蜜和花粉，蜂箱过于密集时，野生蜂会处于劣势。2019 年伦敦的一项研究发现，蜂箱数量五年内翻了一番，而开花植物的面积几乎没有变化。" },
+        { "label": "D", "text": "一些城市当局因此出台了新规。在巴黎，每个蜂箱都必须登记，一些区还限制同一区域内的蜂箱数量。新手养蜂人也被鼓励在购买第一群蜜蜂前完成培训课程。" },
+        { "label": "E", "text": "多数专家认为，解决办法不是移除蜂箱，而是增加食物供应。种植更多开花植物，并用所谓的“蜜蜂走廊”连接绿地，可以让蜜蜂和野生传粉者都繁衍兴旺。" }
+      ],
+      "explanations": {
+        "1": "B 段讲公园花园植物多样、农药少、气温高——都是城市环境对蜜蜂的好处，对应 iv。",
+        "5": "C 段：蜂箱数量五年翻倍，而开花植物面积 barely changed，说明蜂箱增长快于花的面积，TRUE。",
+        "6": "D 段 every hive must now be registered，是强制而非自愿，FALSE。"
+      }
+    }
+  ]
+}
